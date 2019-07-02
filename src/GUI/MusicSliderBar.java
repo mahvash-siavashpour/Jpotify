@@ -35,7 +35,7 @@ public class MusicSliderBar extends JPanel {
     //    private Thread jSliderThread;
     MusicSliderBar(long musicLength) {
         super();
-        this.setBackground(Color.cyan);
+        this.setBackground(Color.gray);
         this.setLayout(new BorderLayout());
         this.setVisible(true);
 
@@ -46,10 +46,10 @@ public class MusicSliderBar extends JPanel {
         JLabel currentSongLable = new JLabel("");
         currentSongLable.setVisible(true);
         currentSongLable.setFont(new Font("Verdana", 9, 13));
-        currentSongLable.setBackground(Color.cyan);
+        currentSongLable.setBackground(Color.red);
         currSongPanel.add(currentSongLable, BorderLayout.NORTH);
         currSongPanel.setVisible(true);
-        currSongPanel.setBackground(Color.cyan);
+        currSongPanel.setBackground(Color.gray);
         this.add(currSongPanel, BorderLayout.WEST);
         currSongPanel.setVisible(true);
 
@@ -66,7 +66,7 @@ public class MusicSliderBar extends JPanel {
         songIconLable.setPreferredSize(d);
         songInfoBox =new JTextArea();
         songInfoBox.setVisible(true);
-        songInfoBox.setBackground(Color.cyan);
+        songInfoBox.setBackground(Color.gray);
         songIconLable.setPreferredSize(new Dimension(100,100));
         songInfoBox.setFont(new Font("M",1,10));
         currSongPanel.add(songIconLable,BorderLayout.WEST);
@@ -78,14 +78,14 @@ public class MusicSliderBar extends JPanel {
         rightPanel.setLayout(new GridLayout(2, 1));
         MUSIC_LENGHT = musicLength;
         JPanel topPanel = new JPanel();
-        topPanel.setBackground(Color.cyan);
+        topPanel.setBackground(Color.gray);
         topPanel.setLayout(new FlowLayout());
         rightPanel.add(topPanel);
 
         //Creating previous button
         previousButton = new JButton();
         previousButton.setVisible(true);
-        previousButton.setBackground(Color.cyan);
+        previousButton.setBackground(Color.gray);
         previousButton.addActionListener(new ButtonListenerPrevious());
         topPanel.add(previousButton);
         try {
@@ -107,12 +107,12 @@ public class MusicSliderBar extends JPanel {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        playButton.setBackground(Color.cyan);
+        playButton.setBackground(Color.gray);
 
         //Creating next button
         nextButton = new JButton();
         nextButton.setVisible(true);
-        nextButton.setBackground(Color.cyan);
+        nextButton.setBackground(Color.gray);
         nextButton.addActionListener(new ButtonListenerNext());
         topPanel.add(nextButton);
         try {
@@ -125,7 +125,7 @@ public class MusicSliderBar extends JPanel {
         //Creating ShufflePlay button
         JButton shufflePlayButton = new JButton("Off");
         shufflePlayButton.setVisible(true);
-        shufflePlayButton.setBackground(Color.cyan);
+        shufflePlayButton.setBackground(Color.gray);
         topPanel.add(shufflePlayButton);
         shufflePlayButton.addActionListener(new ButtonListenerShufflePlay());
         try {
@@ -140,7 +140,7 @@ public class MusicSliderBar extends JPanel {
         //creating repeat button
          repeatButton= new JButton("Off");
         repeatButton.setVisible(true);
-        repeatButton.setBackground(Color.cyan);
+        repeatButton.setBackground(Color.gray);
         topPanel.add(repeatButton);
         repeatButton.addActionListener(new ButtonListenerRepeat());
         try {
@@ -154,7 +154,7 @@ public class MusicSliderBar extends JPanel {
         //Creating replay button
         replayButton = new JButton("");
         replayButton.setVisible(true);
-        replayButton.setBackground(Color.cyan);
+        replayButton.setBackground(Color.gray);
         topPanel.add(replayButton);
         replayButton.addActionListener(new ButtonListenerReplay());
         try {
@@ -166,7 +166,7 @@ public class MusicSliderBar extends JPanel {
 
         lyricsButton = new JButton("Lyrics");
         lyricsButton.setVisible(true);
-        lyricsButton.setBackground(Color.cyan);
+        lyricsButton.setBackground(Color.gray);
         topPanel.add(lyricsButton);
         lyricsButton.addActionListener(new ButtonListenerLyric());
         try {
@@ -184,7 +184,7 @@ public class MusicSliderBar extends JPanel {
         volumeSlider.setPaintLabels(true);
         volumeSlider.setPaintTrack(true);
         volumeSlider.setMajorTickSpacing(50);
-        volumeSlider.setBackground(Color.cyan);
+        volumeSlider.setBackground(Color.gray);
         topPanel.add(volumeSlider);
 
         //Volume lable
@@ -201,13 +201,13 @@ public class MusicSliderBar extends JPanel {
         jSlider.setPaintTicks(true);
         jSlider.setPaintLabels(true);
         jSlider.addChangeListener(new ScrollSliderChanger());
-        jSlider.setBackground(Color.cyan);
+        jSlider.setBackground(Color.gray);
 
         jSlider.setPaintTrack(true);
 
         //creating bottom panel
         JPanel bottomPanel = new JPanel();
-        bottomPanel.setBackground(Color.cyan);
+        bottomPanel.setBackground(Color.gray);
         bottomPanel.setLayout(new BorderLayout());
         bottomPanel.setVisible(true);
         rightPanel.add(bottomPanel);
@@ -217,7 +217,7 @@ public class MusicSliderBar extends JPanel {
         showTime = new JTextArea("00:00/00:00");
         bottomPanel.add(showTime, BorderLayout.EAST);
         showTime.setFont(showTime.getFont().deriveFont(16f)); // will only change size to 16pt
-        showTime.setBackground(Color.cyan);
+        showTime.setBackground(Color.gray);
         showTime.setVisible(true);
 
 

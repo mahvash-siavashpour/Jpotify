@@ -48,7 +48,7 @@ public class JpotifyGUI extends JFrame {
         }
         this.setTitle("Jpotify");
         this.setVisible(true);
-        this.setSize(1200, 600);
+        this.setSize(1200, 700);
         this.setLayout(new BorderLayout());
 //        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -77,7 +77,7 @@ public class JpotifyGUI extends JFrame {
         searcBarPanel = new SearchBarPanel();
         searcBarPanel.setVisible(true);
         this.add(searcBarPanel, BorderLayout.NORTH);
-        choicesArea.setBackground(Color.cyan);
+        choicesArea.setBackground(Color.gray);
         //refreshes the layout after changes
         this.validate();
 

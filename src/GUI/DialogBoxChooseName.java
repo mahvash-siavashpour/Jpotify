@@ -23,15 +23,15 @@ public class DialogBoxChooseName extends JDialog {
         JDialog addDialog=new JDialog();
         addDialog.setLayout(new GridLayout(1,2));
         addDialog.setSize(200, 100);
-        addDialog.setBackground(Color.cyan);
+        addDialog.setBackground(Color.gray);
         addDialog.setVisible(true);
         addDialog.getDefaultCloseOperation();
         textField=new JTextField();
         textField.setVisible(true);
         addDialog.add(textField);
-        textField.setBackground(Color.cyan);
+        textField.setBackground(Color.gray);
         addButton=new JButton(action);
-        addButton.setBackground(Color.pink);
+        addButton.setBackground(Color.gray);
         addButton.setVisible(true);
         addButton.addActionListener(listener);
         addDialog.add(addButton);

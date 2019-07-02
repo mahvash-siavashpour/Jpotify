@@ -26,7 +26,7 @@ public class HomePanel extends JPanel {
         jScrollPane.setViewportView(this);
         jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        jScrollPane.setViewportBorder(new LineBorder(Color.pink));
+        jScrollPane.setViewportBorder(new LineBorder(Color.white));
         jScrollPane.updateUI();
         jScrollPane.setVisible(true);
 

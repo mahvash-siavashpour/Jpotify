@@ -12,6 +12,17 @@ public class SignInOrSignUp extends JFrame {
 
     public SignInOrSignUp(){
 
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
         Image icon = Toolkit.getDefaultToolkit().getImage("src/GUI/Jpotify.jpg");
         this.setIconImage(icon);
         this.setTitle("Sign in or sign up please!!");
@@ -32,16 +43,13 @@ public class SignInOrSignUp extends JFrame {
         this.add(panelSignUp);
         panelSignUp.setVisible(false);
 
-
-        JButton signIn = new JButton("Sign in");
+        JButton signIn = new JButton("Enter as client");
+        signIn.setBackground(Color.CYAN);
         signIn.addActionListener(new ClickListenerForSignInOrSignUp());
         panel1.add(signIn);
 
-        JButton signUp = new JButton("Sign up");
-        signUp.addActionListener(new ClickListenerForSignInOrSignUp());
-        panel1.add(signUp);
-
-        JButton adminTest = new JButton("admin test");
+        JButton adminTest = new JButton("Admin test");
+        adminTest.setBackground(Color.CYAN);
         adminTest.addActionListener(new ClickListenerForAccountManager());
         panel1.add(adminTest);
 

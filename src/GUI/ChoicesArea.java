@@ -30,18 +30,21 @@ public class ChoicesArea extends JPanel {
         JButton saveButton = new JButton("Add Song");
         saveButton.setFont(saveButton.getFont().deriveFont(12f)); // will only change size to 14pt
         saveButton.setVisible(true);
+        saveButton.setBackground(Color.gray);
         this.add(saveButton);
         saveButton.addActionListener(new ClickListenerForAddingSongs());
 
 
         JButton homeButton = new JButton("Home");
         homeButton.setVisible(true);
+        homeButton.setBackground(Color.gray);
         homeButton.setFont(homeButton.getFont().deriveFont(12f));
         this.add(homeButton);
         homeButton.addActionListener(new ClickListenerForShowingHome());
 
         JButton songsButton = new JButton("Songs");
         songsButton.setVisible(true);
+        songsButton.setBackground(Color.gray);
         songsButton.setFont(songsButton.getFont().deriveFont(12f)); // will only change size to 14pt
 
         this.add(songsButton);
@@ -55,12 +58,14 @@ public class ChoicesArea extends JPanel {
 
         JButton albumsButton = new JButton("Albums");
         albumsButton.setVisible(true);
+        albumsButton.setBackground(Color.gray);
         albumsButton.setFont(albumsButton.getFont().deriveFont(12f)); // will only change size to 14pt
         this.add(albumsButton);
         albumsButton.addActionListener(new ClickListenerForShowingAlbums());
 
         JButton favouritePlaylistButton = new JButton("Favourite Playlist");
         favouritePlaylistButton.setVisible(true);
+        favouritePlaylistButton.setBackground(Color.gray);
         favouritePlaylistButton.setFont(favouritePlaylistButton.getFont().deriveFont(12f)); // will only change size to 14pt
         this.add(favouritePlaylistButton);
         favouritePlaylistButton.addActionListener(new ClickListenerForShowingFavouritePlaylist());
@@ -69,6 +74,7 @@ public class ChoicesArea extends JPanel {
 
         JButton sharedPlaylistButton = new JButton("Shared Playlist");
         sharedPlaylistButton.setVisible(true);
+        sharedPlaylistButton.setBackground(Color.gray);
         sharedPlaylistButton.setFont(sharedPlaylistButton.getFont().deriveFont(12f)); // will only change size to 14pt
         this.add(sharedPlaylistButton);
         sharedPlaylistButton.addActionListener(new ClickListenerForShowingSharedPlaylist());
@@ -76,6 +82,7 @@ public class ChoicesArea extends JPanel {
 
         JButton newPlayListButton = new JButton("New PlayList");
         newPlayListButton.setVisible(true);
+        newPlayListButton.setBackground(Color.gray);
         newPlayListButton.setFont(newPlayListButton.getFont().deriveFont(12f));
         this.add(newPlayListButton);
         newPlayListButton.addActionListener(new ClickListenerForNewPlaylist());
@@ -89,7 +96,7 @@ public class ChoicesArea extends JPanel {
         JLabel playlistLable = new JLabel("  Your Playlists:");
         playlistLable.setVisible(true);
         playlistLable.setFont(new Font("Verdana", 9, 10));
-        playlistLable.setBackground(Color.cyan);
+        playlistLable.setBackground(Color.gray);
         this.add(playlistLable, BorderLayout.NORTH);
 
         model = new DefaultListModel();
@@ -99,7 +106,7 @@ public class ChoicesArea extends JPanel {
         list.setLayoutOrientation(JList.VERTICAL);
         list.setVisibleRowCount(2);
         list.addListSelectionListener(new SelectedPlaylistListener());
-        list.setBackground(Color.cyan);
+        list.setBackground(Color.gray);
 //        list.addListSelectionListener(new ListSelectionListener());
         try {
             String playlistName;
@@ -155,7 +162,7 @@ public class ChoicesArea extends JPanel {
         this.add(jScrollPane);
         jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        jScrollPane.setViewportBorder(new LineBorder(Color.pink));
+        jScrollPane.setViewportBorder(new LineBorder(Color.gray));
         jScrollPane.updateUI();
         jScrollPane.setVisible(true);
 
@@ -176,7 +183,7 @@ public class ChoicesArea extends JPanel {
         int h = this.getHeight();
         //this line
         g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, .5f));
-        g2.setPaint(new GradientPaint(0, 0, Color.pink, 0, h, Color.cyan));
+        g2.setPaint(new GradientPaint(0, 0, Color.gray, 0, h, Color.white));
         g2.fillRect(0, 0, w, h);
         g2.dispose();
     }

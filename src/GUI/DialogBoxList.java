@@ -28,12 +28,12 @@ public class DialogBoxList extends JDialog {
         super();
         this.setLayout(new GridLayout(1, 2));
         this.setSize(200, 400);
-        this.setBackground(Color.pink);
+        this.setBackground(Color.white);
         this.setVisible(true);
         this.getDefaultCloseOperation();
         DefaultListModel model = new DefaultListModel();
         JList list = new JList(model);
-        list.setBackground(Color.pink);
+        list.setBackground(Color.gray);
         list.setVisible(true);
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.setLayoutOrientation(JList.VERTICAL);

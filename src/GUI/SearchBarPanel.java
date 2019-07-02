@@ -21,7 +21,7 @@ public class SearchBarPanel extends JPanel {
         JTextArea name = new JTextArea("Search: ");
         name.setEditable(false);
         name.setVisible(true);
-        name.setBackground(Color.cyan);
+        name.setBackground(Color.gray);
         tmp1.add(name, BorderLayout.WEST);
 
         searched = new JTextField(" ");
@@ -50,10 +50,10 @@ public class SearchBarPanel extends JPanel {
         tmp2.add(showResults);
 
         this.add(tmp1);
-        tmp1.setBackground(Color.cyan);
+        tmp1.setBackground(Color.gray);
         this.add(tmp2);
-        tmp2.setBackground(Color.cyan);
-        this.setBackground(Color.cyan);
+        tmp2.setBackground(Color.gray);
+        this.setBackground(Color.gray);
         this.repaint();
 
     }
@@ -76,7 +76,7 @@ public class SearchBarPanel extends JPanel {
         int h = this.getHeight();
         //this line
         g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, .5f));
-        g2.setPaint(new GradientPaint(0, 0, Color.cyan, 0, h, Color.pink));
+        g2.setPaint(new GradientPaint(0, 0, Color.gray, 0, h, Color.white));
         g2.fillRect(0, 0, w, h);
         g2.dispose();
     }

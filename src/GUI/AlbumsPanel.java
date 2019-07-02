@@ -31,7 +31,7 @@ public class AlbumsPanel extends JPanel {
         jScrollPane.setViewportView(this);
         jScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        jScrollPane.setViewportBorder(new LineBorder(Color.pink));
+        jScrollPane.setViewportBorder(new LineBorder(Color.gray));
         jScrollPane.updateUI();
         jScrollPane.setVisible(true);
         this.setVisible(true);

@@ -46,7 +46,7 @@ public class ButtonListenerLyric implements ActionListener {
         JTextArea currentSongText = new JTextArea();
         currentSongText.setVisible(true);
         currentSongText.setFont(new Font("Verdana", 9, 13));
-        currentSongText.setBackground(Color.cyan);
+        currentSongText.setBackground(Color.GRAY);
         currentSongText.setText(newLyric);
         currentSongText.setBorder(new EmptyBorder(30, 20, 30, 20));
         JPanel tmp = new JPanel();

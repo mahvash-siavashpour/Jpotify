@@ -32,7 +32,7 @@ public class ClickButtonRefreshFriendActivity implements ActionListener {
 
             Dimension d=new Dimension(190,20);
             JPanel friend=new JPanel();
-            friend.setBackground(Color.pink);
+            friend.setBackground(Color.white);
             friend.setVisible(true);
             friend.setLayout(new GridLayout(4,1));
             Main.getJpotifyGUI().getFriendsActivityArea().add(friend);
@@ -45,7 +45,7 @@ public class ClickButtonRefreshFriendActivity implements ActionListener {
 
             JButton getPlaylist=new JButton("Get Their Playlist !");
             getPlaylist.setName(ClickButtonRefreshFriendActivity.getReceivedFriendInfos().get(i).getIP());
-            getPlaylist.setBackground(Color.pink);
+            getPlaylist.setBackground(Color.white);
             getPlaylist.addActionListener(new ClickListenerForGettingFriendPlaylist());
             friend.add(getPlaylist);
             getPlaylist.setPreferredSize(d);
