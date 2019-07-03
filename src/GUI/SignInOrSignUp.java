@@ -25,7 +25,7 @@ public class SignInOrSignUp extends JFrame {
         }
         Image icon = Toolkit.getDefaultToolkit().getImage("src/GUI/Jpotify.jpg");
         this.setIconImage(icon);
-        this.setTitle("Sign in or sign up please!!");
+        this.setTitle("Sign in or sign up please!");
         this.setVisible(true);
         this.setSize(500, 100);
         this.setLayout(new FlowLayout());
@@ -43,15 +43,11 @@ public class SignInOrSignUp extends JFrame {
         this.add(panelSignUp);
         panelSignUp.setVisible(false);
 
-        JButton signIn = new JButton("Enter as client");
+        JButton signIn = new JButton("log in/sign up");
+        signIn.setPreferredSize(new Dimension(100,50));
         signIn.setBackground(Color.CYAN);
         signIn.addActionListener(new ClickListenerForSignInOrSignUp());
         panel1.add(signIn);
-
-        JButton adminTest = new JButton("Admin test");
-        adminTest.setBackground(Color.CYAN);
-        adminTest.addActionListener(new ClickListenerForAccountManager());
-        panel1.add(adminTest);
 
     }
 

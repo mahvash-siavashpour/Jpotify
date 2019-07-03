@@ -39,38 +39,36 @@ public class MusicSliderBar extends JPanel {
         this.setLayout(new BorderLayout());
         this.setVisible(true);
 
-        JPanel currSongPanel = new JPanel();
-        currSongPanel.setLayout(new BorderLayout());
-        currSongPanel.setVisible(true);
-
-        JLabel currentSongLable = new JLabel("");
-        currentSongLable.setVisible(true);
-        currentSongLable.setFont(new Font("Verdana", 9, 13));
-        currentSongLable.setBackground(Color.red);
-        currSongPanel.add(currentSongLable, BorderLayout.NORTH);
-        currSongPanel.setVisible(true);
-        currSongPanel.setBackground(Color.gray);
-        this.add(currSongPanel, BorderLayout.WEST);
-        currSongPanel.setVisible(true);
 
 
         JPanel rightPanel = new JPanel();
         rightPanel.setVisible(true);
         this.add(rightPanel, BorderLayout.CENTER);
 
+        JPanel currSongPanel = new JPanel();
+        currSongPanel.setLayout(new GridLayout(1,2));
+        currSongPanel.setVisible(true);
+        this.add(currSongPanel,BorderLayout.WEST);
+        currSongPanel.setBackground(Color.gray);
+        currSongPanel.setPreferredSize(new Dimension(180,110));
+
 
         //creating song icon
         songIconLable = new JLabel();
-        Dimension d = new Dimension(120, 110);
+        Dimension d = new Dimension(110, 110);
         songIconLable.setVisible(true);
         songIconLable.setPreferredSize(d);
+
+
+
+        //song info box
         songInfoBox =new JTextArea();
         songInfoBox.setVisible(true);
         songInfoBox.setBackground(Color.gray);
-        songIconLable.setPreferredSize(new Dimension(100,100));
+        songIconLable.setPreferredSize(new Dimension(50,100));
         songInfoBox.setFont(new Font("M",1,10));
-        currSongPanel.add(songIconLable,BorderLayout.WEST);
-        currSongPanel.add(songInfoBox,BorderLayout.EAST);
+        currSongPanel.add(songIconLable);
+        currSongPanel.add(songInfoBox);
 
 
 

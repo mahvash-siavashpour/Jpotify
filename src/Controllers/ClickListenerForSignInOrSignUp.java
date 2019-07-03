@@ -61,6 +61,12 @@ public class ClickListenerForSignInOrSignUp implements ActionListener {
         signInButton.addActionListener(new ClickListenerForSignInButton());
         signUpButton.addActionListener(new ClickListenerForSignUpButton());
     }
+    public static void setUsernameTextField(JTextField usernameTextField) {
+        ClickListenerForSignInOrSignUp.usernameTextField = usernameTextField;
+    }
+
+
+
 
     public static JTextField getPasswordTextField() {
         return passwordTextField;

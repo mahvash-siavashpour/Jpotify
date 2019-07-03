@@ -1,16 +1,10 @@
 package GUI;
-
-import Controllers.SelectSongToAddToPlaylistListener;
-import Controllers.SelectedPlaylistListener;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
-import javax.swing.event.ListSelectionEvent;
 
 /**
  * This class is a dialog box containing a list
@@ -27,13 +21,13 @@ public class DialogBoxList extends JDialog {
     public DialogBoxList(String fileName, javax.swing.event.ListSelectionListener listener){
         super();
         this.setLayout(new GridLayout(1, 2));
-        this.setSize(200, 400);
+        this.setSize(400, 500);
         this.setBackground(Color.white);
         this.setVisible(true);
         this.getDefaultCloseOperation();
         DefaultListModel model = new DefaultListModel();
         JList list = new JList(model);
-        list.setBackground(Color.gray);
+        list.setBackground(Color.lightGray);
         list.setVisible(true);
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.setLayoutOrientation(JList.VERTICAL);
@@ -44,12 +38,13 @@ public class DialogBoxList extends JDialog {
         Scanner sc = null;
         try {
             sc = new Scanner(new FileReader(new File("src/"+ fileName+".txt")));
+            while (sc.hasNext()) {
+                playlistName = sc.nextLine();
+                model.addElement(playlistName);
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        while (sc.hasNext()) {
-            playlistName = sc.nextLine();
-            model.addElement(playlistName);
-        }
+       
     }
 }

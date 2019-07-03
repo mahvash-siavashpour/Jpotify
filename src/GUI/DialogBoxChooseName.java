@@ -1,5 +1,4 @@
 package GUI;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -29,7 +28,7 @@ public class DialogBoxChooseName extends JDialog {
         textField=new JTextField();
         textField.setVisible(true);
         addDialog.add(textField);
-        textField.setBackground(Color.gray);
+        textField.setBackground(Color.lightGray);
         addButton=new JButton(action);
         addButton.setBackground(Color.gray);
         addButton.setVisible(true);
